@@ -11,16 +11,16 @@ namespace IMPLEMENTAZIONE_VERIFICA
         private string _id;
         private string _indirizzo;
         private string _banca;
-        private bool _disponibilità;
+        private bool _disp;
         private Bancomat seriale;
         string[] blocco = new string[100];
     
-        public Sportello(string id, string indirizzo, string banca, bool disponibiltà)
+        public Sportello(string id, string indirizzo, string banca, bool disp)
         {
             Id = id;
             Indirizzo = indirizzo;
             Banca = banca;
-            setStato(_disponibilità);
+            setStato(_disp);
         }
         public string Id;
         public string Indirizzo;
@@ -28,14 +28,14 @@ namespace IMPLEMENTAZIONE_VERIFICA
 
         public bool getStato()
         {
-            return _disponibilità;
+            return _disp;
         }
         private void setStato(bool stato)
         {
-            this._disponibilità = stato;
+            this._disp = stato;
         }
 
-        public void Inserisci (Bancomat carta, bool disponibilità)
+        public void Inserisci (Bancomat carta, bool disp)
         {
             bool check=false;
             
@@ -53,7 +53,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
                 setStato(false);
             }
         }
-        public void Rimuovi(Bancomat carta, bool disponibilità)
+        public void Rimuovi(Bancomat carta, bool disp)
         {
             setStato(true);
         }

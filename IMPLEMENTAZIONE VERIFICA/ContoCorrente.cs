@@ -46,7 +46,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
 
         public void Deposita(float somma)
         {
-            //se la somma che si vuole depositare è negativa non si potrà svolgere il deposito
+           
             if (somma <= 0)
             {
                 throw new Exception("La somma deve essere un numero positivo");     
@@ -78,7 +78,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
         {
 
             Preleva(somma);
-            //scegliere la destinazione (in questo caso conto1/conto2) in cui verrano spostati i soldi
+            
             destinazione.Deposita(somma);
         }
     }

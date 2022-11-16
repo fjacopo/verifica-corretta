@@ -12,7 +12,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
         {
             ContoCorrente conto1 = new ContoCorrente("123", "Luca", "Ubi", 0);
             ContoCorrente conto2 = new ContoCorrente("456", "Paolo", "Ubi", 0);
-            //try e catch in caso avessimo delle eccezioni registrate dal throw
+           
             try
             {
                 conto1.Deposita(100);
@@ -25,7 +25,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
 
                 conto1.Sposta(conto2, 50);
             }
-            //con exception intendiamo l'exception specificata nella classe ed "e" è il messaggio
+            
             catch(Exception e)
             {
                 Console.WriteLine(e);
@@ -33,7 +33,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
             }
 
             Bancomat carta1 = new Bancomat("098", "efgh", conto1);
-            Bancomat carta2 = new Bancomat("345", "abcd", conto2);
+            Bancomat carta2 = new Bancomat("765", "abcd", conto2);
             try
             {
                 carta1.Depositare(40, "efgh");
@@ -44,7 +44,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
                 Console.WriteLine(a);
             }
 
-            Sportello sportello = new Sportello("851334991", "", "Banca di Bergamo", true);
+            Sportello sportello = new Sportello("851", "123", "Banca di Bergamo", true);
         }
 
         

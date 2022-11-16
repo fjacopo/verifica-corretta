@@ -12,14 +12,14 @@ namespace IMPLEMENTAZIONE_VERIFICA
         private string _pin;
         private ContoCorrente conto;
 
-        public Bancomat(string id, string pin, ContoCorrente contoswag)
+        public Bancomat(string id, string pin, ContoCorrente Conto)
         {
              Id = id;
             Pin = pin;
-            conto = contoswag;
+            conto = Conto;
         }
 
-        //properties (piu veloce)
+       
 
         public string Id
         {
@@ -43,7 +43,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
             }
             else
             {
-                throw new Exception("Pin errato");
+                throw new Exception("Pin Errato");
             }
         }
         public void Prelevare(float somma, string verifica)
@@ -54,7 +54,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
             }
             else
             {
-                throw new Exception("Pin errato");
+                throw new Exception("Pin Errato");
     }
 }
         
@@ -66,7 +66,7 @@ namespace IMPLEMENTAZIONE_VERIFICA
             }
             else
             {
-                throw new Exception("Pin errato");
+                throw new Exception("Pin Errato");
             }
         }
         public string getId()
